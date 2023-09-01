@@ -22,24 +22,21 @@ function App() {
       );
       const responseData = response.data;
       setData(responseData);
-      setIsDataFetched(true); // Устанавливаем флаг после получения данных
+      setIsDataFetched(true);
       setIsLoading(false);
-      console.log(responseData);
     } catch (error) {
       setIsLoading(false);
       setData([]);
-      setIsDataFetched(true); // Устанавливаем флаг в случае ошибки
-      console.error(error);
+      setIsDataFetched(true);
     }
   };
 
   const handleChangeInput = (e) => {
     setWord(e.target.value);
-    console.log(e.target.value);
   };
 
   const handleClickButton = () => {
-    setIsDataFetched(false); // Сбрасываем флаг перед новым запросом
+    setIsDataFetched(false);
     fetchData();
   };
 
@@ -55,7 +52,7 @@ function App() {
         console.error('Error playing audio:', error);
       });
     } else {
-      setShowModal(true); // Show the modal if no audio is available
+      setShowModal(true); 
     }
   };
 
