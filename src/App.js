@@ -12,7 +12,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
-  const [isDataFetched, setIsDataFetched] = useState(false); // Добавленное состояние
+  const [isDataFetched, setIsDataFetched] = useState(false); 
 
   const fetchData = async () => {
     try {
